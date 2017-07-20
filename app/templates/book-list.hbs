@@ -3,9 +3,7 @@
 
   <ul>
     {{#each model as |a-book|}}
-        <li>
-          <i>{{a-book.title}}</i> — {{a-book.author}}
-        </li>
+      {{book-list/book book=a-book}}
     {{/each}}
   </ul>
 </div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>My books</h3>
+
+  <ul>
+    {{#each model as |a-book|}}
+        <li>
+          <i>{{a-book.title}}</i> — {{a-book.author}}
+        </li>
+    {{/each}}
+  </ul>
+</div>

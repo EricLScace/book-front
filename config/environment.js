@@ -49,9 +49,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/book-front'
+    ENV.rootURL = '/'
     ENV.locationType = 'hash'
-    ENV.apiHost = 'https://ericlscace.github.io/book-back/'
+    ENV.apiHost = 'https://frozen-everglades-34728.herokuapp.com'
   }
 
   return ENV

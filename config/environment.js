@@ -2,11 +2,12 @@
 
 module.exports = function (environment) {
   'use strict'
-  var ENV = {
+  const ENV = {
     modulePrefix: 'book-front',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    apiHost: 'http://localhost:3000/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -15,13 +16,13 @@ module.exports = function (environment) {
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false,
-      },
+      }
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
+    }
   }
 
   if (environment === 'development') {
@@ -53,6 +54,5 @@ module.exports = function (environment) {
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://frozen-everglades-34728.herokuapp.com'
   }
-
   return ENV
 }

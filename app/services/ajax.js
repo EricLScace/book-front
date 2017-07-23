@@ -1,6 +1,5 @@
 import Ember from 'ember'
 import AjaxService from 'ember-ajax/services/ajax'
-
 import ENV from 'book-front/config/environment'
 
 export default AjaxService.extend({
@@ -16,6 +15,6 @@ export default AjaxService.extend({
       }
 
       return headers
-    },
-  }),
+    }
+  })
 })

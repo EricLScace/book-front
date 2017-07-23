@@ -49,7 +49,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/'
+    ENV.rootURL = 'book-front'
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://frozen-everglades-34728.herokuapp.com'
   }

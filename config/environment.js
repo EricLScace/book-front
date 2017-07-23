@@ -1,8 +1,8 @@
 /* jshint node: true */
 
 module.exports = function (environment) {
-  'use strict';
-  const ENV = {
+  'use strict'
+  var ENV = {
     modulePrefix: 'book-front',
     environment: environment,
     rootURL: '/',
@@ -22,35 +22,37 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-  };
+  }
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.APP.LOG_RESOLVER = true
+    // ENV.APP.LOG_ACTIVE_GENERATION = true
+    // ENV.APP.LOG_TRANSITIONS = true
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true
+    // ENV.APP.LOG_VIEW_LOOKUPS = true
     let port = +('GA'.split('').reduce((p, c) =>
       p + c.charCodeAt().toString(16), '')
-    );
-    ENV.apiHost = `http://localhost:${port}`;
+    )
+    ENV.apiHost = `http://localhost:${port}`
   }
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.rootUrl = '/';
-    ENV.locationType = 'none';
+    ENV.rootUrl = '/'
+    ENV.locationType = 'none'
 
     // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+    ENV.APP.LOG_ACTIVE_GENERATION = false
+    ENV.APP.LOG_VIEW_LOOKUPS = false
 
-    ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.rootElement = '#ember-testing'
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
+    ENV.rootURL = '/book-front'
+    ENV.locationType = 'hash'
+    ENV.apiHost = 'https://ericlscace.github.io/book-back/'
   }
 
-  return ENV;
-};
+  return ENV
+}

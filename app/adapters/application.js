@@ -1,7 +1,7 @@
-import ENV from 'book-front/config/environment';
-import ActiveModelAdapter from 'active-model-adapter';
+import ENV from 'book-front/config/environment'
+import ActiveModelAdapter from 'active-model-adapter'
 
-import Ember from 'ember';
+import Ember from 'ember'
 
 export default ActiveModelAdapter.extend({
   host: ENV.apiHost,
@@ -10,13 +10,13 @@ export default ActiveModelAdapter.extend({
 
   headers: Ember.computed('auth.credentials.token', {
     get () {
-      let headers = {};
-      const token = this.get('auth.credentials.token');
+      let headers = {}
+      const token = this.get('auth.credentials.token')
       if (token) {
-        headers.Authorization = `Token token=${token}`;
+        headers.Authorization = `Token token=${token}`
       }
 
-      return headers;
-    },
-  }),
-});
+      return headers
+    }
+  })
+})
